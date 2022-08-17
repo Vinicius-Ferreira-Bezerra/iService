@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<table class="thead-light">
+		<thead>
+			<tr>
+				<th scope="col">ID</th>
+				<th scope="col">Serviço</th>
+				<th scope="col">classificacaoDoServico</th>
+				<th scope="col">descriçãoDoServico</th>
+				<th scope="col">rua</th>
+				<th scope="col">bairro</th>
+				<th scope="col">cidade</th>
+				<th scope="col">numero</th>
+				<th scope="col">cep</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each = "servico: ${keyResult}">
+				<td th:text="${servico.id}"></td>
+				<td th:text="${servico.servico}"></td>
+				<td th:text="${servico.classificacaoDoServico}"></td>
+				<td th:text="${servico.descriçãoDoServico}"></td>
+				<td th:text="${servico.rua}"></td>
+				<td th:text="${servico.bairro}"></td>
+				<td th:text="${servico.cidade}"></td>
+				<td th:text="${servico.numero}"></td>
+				<td th:text="${servico.cep}"></td>
+				!--<button type="button" class="btn btn-primary">Excluir</button>--!
+				!--Procucar onde inserir o 'Method-get' para enviar o id--!
+				!--Inserir Mapeamento /games/excluir/'id' e atribuir a variavel '$id=jogos.id' --!
+			</tr>
+		</tbody>
+	</table>
+	<script src="/js/boootstrap.min.js"></script>
+</body>
+</html>

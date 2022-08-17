@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<table class="thead-light">
+		<thead>
+			<tr>
+				<th scope="col">ID</th>
+				<th scope="col">Serviço</th>
+				<th scope="col">classificacaoDoServico</th>
+				<th scope="col">descriçãoDoServico</th>
+				<th scope="col">rua</th>
+				<th scope="col">bairro</th>
+				<th scope="col">cidade</th>
+				<th scope="col">numero</th>
+				<th scope="col">cep</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each = "servico: ${keyPrinc}">
+				<td th:text="${servico.id}"></td>
+				<td th:text="${servico.servico}"></td>
+				<td th:text="${servico.classificacaoDoServico}"></td>
+				<td th:text="${servico.descriçãoDoServico}"></td>
+				<td th:text="${servico.rua}"></td>
+				<td th:text="${servico.bairro}"></td>
+				<td th:text="${servico.cidade}"></td>
+				<td th:text="${servico.numero}"></td>
+				<td th:text="${servico.cep}"></td>
+				</tr>
+		</tbody>
+	</table>
+</body>
+</html>
